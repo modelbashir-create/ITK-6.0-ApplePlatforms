@@ -25,19 +25,19 @@ These source trees were edited independently to keep each platform buildable.
 Run:
 
 ```bash
-/Users/mohamedelbashir/Developer/ITK-6.0-ApplePlatforms/build_itk_apple_xcframework.sh
+./build_itk_apple_xcframework.sh
 ```
 
 Optional output path:
 
 ```bash
-/Users/mohamedelbashir/Developer/ITK-6.0-ApplePlatforms/build_itk_apple_xcframework.sh /path/to/ITK.xcframework
+./build_itk_apple_xcframework.sh /path/to/ITK.xcframework
 ```
 
 Default output:
 
 ```text
-/Users/mohamedelbashir/Developer/ITK-6.0-ApplePlatforms/out/ITK.xcframework
+./out/ITK.xcframework
 ```
 
 ## What The Script Does
