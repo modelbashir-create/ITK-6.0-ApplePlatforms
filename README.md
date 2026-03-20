@@ -2,7 +2,9 @@
 
 Platform-adapted packaging of ITK 6.0.0 for iOS, macOS, and visionOS.
 
-This directory contains the platform-specific source trees and build scripts used to produce a static `ITK.xcframework` for Apple platforms.
+This directory contains the platform-specific source trees and build scripts used to produce a static `ITK.xcframework` for Apple platform. I ended up needing custom scripts for each platform slice, and in some cases separate edited source files as well, because a few assumptions in the upstream source flow did not map cleanly onto Apple’s SDK. For Apple packaging, especially when the end goal is an XCFramework that can be consumed cleanly by a Swift package or app target, static packaging is often the more practical route.  I successfully built a multi-slice ITK.xcframework covering macOS, iOS, and visionOS for both devices and simulators, and integrated it into my package stack. 
+
+To further describe what exactly was done to the source files i simply did not keep track, mostly it was bypassing test programs during configuration. just having  BUILD_TESTING=OFF and BUILD_EXAMPLES=OFF was not sufficient. 
 
 ## Layout
 
